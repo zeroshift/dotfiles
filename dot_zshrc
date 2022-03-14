@@ -72,7 +72,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(branch zsh-interactive-cd)
-plugins=(colorize docker dotenv gh git-prompt helm kubectl vi-mode virtualenv vscode)
+plugins=(colorize docker dotenv gh helm kubectl vi-mode virtualenv vscode)
 
 source $ZSH/oh-my-zsh.sh
 
