@@ -127,7 +127,7 @@ export EDITOR='/usr/bin/vim'
 export VISUAL='/usr/bin/vim'
 
 # PYENV
-which pyenv >/dev/null \
+which pyenv >/dev/null 2>&1 \
     && export PYENV_VIRTUALENV_DISABLE_PROMPT=1 \
     && eval "$(pyenv init -)"
 
