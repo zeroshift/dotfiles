@@ -1,7 +1,7 @@
 {{ if eq .chezmoi.os "darwin" -}}
 eval "$(/opt/homebrew/bin/brew shellenv)"
 {{ else -}}
-if [[ $(uname -m) -eq "x86_64" ]]; then
+if uname -m | egrep '^x86_64' >/dev/null 2>&1; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 which pyenv >/dev/null 2>&1 \
