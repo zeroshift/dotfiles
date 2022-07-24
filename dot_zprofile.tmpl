@@ -1,6 +1,9 @@
 {{ if eq .chezmoi.os "darwin" -}}
 eval "$(/opt/homebrew/bin/brew shellenv)"
 {{ else -}}
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-eval "$(pyenv init --path)"
+if [[ $(uname -m) -eq "x86_64" ]]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+which pyenv >/dev/null 2>&1 \
+    && eval "$(pyenv init --path)"
 {{ end -}}
