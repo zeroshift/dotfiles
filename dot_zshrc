@@ -127,8 +127,9 @@ export EDITOR='/usr/bin/vim'
 export VISUAL='/usr/bin/vim'
 
 # PYENV
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-eval "$(pyenv init -)"
+which pyenv >/dev/null \
+    && export PYENV_VIRTUALENV_DISABLE_PROMPT=1 \
+    && eval "$(pyenv init -)"
 
 #PATH
 export PATH=$PATH:~/bin:~/.local/bin:~/go/bin
