@@ -131,9 +131,12 @@ which pyenv >/dev/null 2>&1 \
     && export PYENV_VIRTUALENV_DISABLE_PROMPT=1 \
     && eval "$(pyenv init -)"
 
+# Load asdf shims
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+. ~/.asdf/plugins/golang/set-env.zsh
+
 #PATH
 export PATH=$PATH:~/bin:~/.local/bin:~/go/bin
 
 # Load private zshrc
 test -e "${HOME}/.zshrc_private" && source "${HOME}/.zshrc_private"
-
