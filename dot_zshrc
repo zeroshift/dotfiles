@@ -72,7 +72,7 @@ zstyle ':omz:update' mode disabled  # disable automatic updates
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(branch zsh-interactive-cd)
-plugins=(colorize docker dotenv gh helm kubectl vi-mode virtualenv vscode)
+plugins=(asdf colorize docker dotenv gh helm kubectl vi-mode virtualenv vscode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -132,8 +132,12 @@ which pyenv >/dev/null 2>&1 \
     && eval "$(pyenv init -)"
 
 # Load asdf shims
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-. ~/.asdf/plugins/golang/set-env.zsh
+if test -e /opt/homebrew/opt/asdf/libexec/asdf.sh; then
+    . /opt/homebrew/opt/asdf/libexec/asdf.sh
+fi
+if asdf which go >/dev/null; then
+    . ~/.asdf/plugins/golang/set-env.zsh
+fi
 
 #PATH
 export PATH=$PATH:~/bin:~/.local/bin:~/go/bin
