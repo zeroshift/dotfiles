@@ -1,10 +1,10 @@
-amtool 0.26.0
+amtool 0.27.0
 chezmoi system
 dyff system
 flux2 2.2.3
 golang system
 jq system
-kubectl 1.28.0
+kubectl 1.28.10
 mimirtool 2.11.0
 promtool 2.51.2
 rclone system
