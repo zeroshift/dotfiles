@@ -2,6 +2,7 @@ amtool 0.27.0
 chezmoi system
 dyff system
 flux2 2.2.3
+github-cli system
 golang system
 jq system
 kubectl 1.28.10
