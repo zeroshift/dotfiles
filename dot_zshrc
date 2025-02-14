@@ -137,11 +137,14 @@ export PATH=$PATH:~/bin:~/.local/bin:~/go/bin
 # Krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
-# Load private zshrc
-test -e "${HOME}/.zshrc_private" && source "${HOME}/.zshrc_private"
+# asdf-vm
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # Starship
 eval "$(starship init zsh)"
 
 # Devbox
 DEVBOX_NO_PROMPT=true
+
+# Load private zshrc
+test -e "${HOME}/.zshrc_private" && source "${HOME}/.zshrc_private"
