@@ -72,7 +72,7 @@ zstyle ':omz:update' mode disabled  # disable automatic updates
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(branch zsh-interactive-cd)
-plugins=(asdf brew colorize dotenv fluxcd gh helm kubectl kubectx vi-mode)
+plugins=(brew colorize dotenv fluxcd gh helm kubectl kubectx vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -142,3 +142,6 @@ test -e "${HOME}/.zshrc_private" && source "${HOME}/.zshrc_private"
 
 # Starship
 eval "$(starship init zsh)"
+
+# Devbox
+DEVBOX_NO_PROMPT=true
