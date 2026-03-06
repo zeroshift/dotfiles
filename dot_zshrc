@@ -72,7 +72,7 @@ zstyle ':omz:update' mode disabled  # disable automatic updates
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(branch zsh-interactive-cd)
-plugins=(brew colorize dotenv fluxcd gh helm kubectl kubectx vi-mode)
+plugins=(brew chezmoi colorize docker docker-compose dotenv fluxcd fzf gh golang helm k9s kind kubectl kubectx macos minikube opentofu rclone pre-commit starship terraform timoni vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -137,8 +137,8 @@ export PATH=$PATH:~/bin:~/.local/bin:~/go/bin
 # Krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
-# asdf-vm
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+# Mise
+eval "$(mise activate zsh)"
 
 # Starship
 eval "$(starship init zsh)"
