@@ -3,7 +3,7 @@ chezmoi system
 dyff system
 flux2 2.2.3
 github-cli system
-golang system
+golang 1.25.5
 jq system
 kubectl 1.28.10
 mimirtool 2.11.0

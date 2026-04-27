@@ -21,6 +21,10 @@
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 
-# asdf-vm
-$env.ASDF_DIR = (brew --prefix asdf | str trim | into string | path join 'libexec')
- source /opt/homebrew/opt/asdf/libexec/asdf.nu
+# # asdf-vm
+# $env.ASDF_DIR = (brew --prefix asdf | str trim | into string | path join 'libexec')
+#  source /opt/homebrew/opt/asdf/libexec/asdf.nu
+
+$env.config = {
+    edit_mode: vi
+}
