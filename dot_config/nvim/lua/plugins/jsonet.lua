@@ -5,9 +5,6 @@ return {
       servers = {
         jsonnet_ls = {
           settings = {
-            ext_vars = {
-              foo = "bar",
-            },
             formatting = {
               MaxBlankLines = 2,
               StringStyle = "single",
